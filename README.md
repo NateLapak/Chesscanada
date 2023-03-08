@@ -4,7 +4,11 @@
 <h2> Technologies used </h2>
 <p> 
 Front-end: React and ChakraUI.
+  <br/>
 API: Lichess API
+  <br/>
 Back-end: Flask
+  <br/>
 Databse: Flask sql alchemy
+  <br/>
 </p>
