@@ -23,9 +23,13 @@ const Navbar = () => {
                 <Flex alignItems={'center'}>
                     <Menu>
                         <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }} color="white">
-                   
+                            <Box size={[20, 40, 60, 80]}>
+                                Register
+                            </Box>
+
+                            <Box size={[20, 40, 60, 80]}>
                                 Login
- 
+                            </Box>
                         </HStack>
                     </Menu>
                 </Flex>
