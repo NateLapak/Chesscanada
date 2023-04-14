@@ -1,5 +1,4 @@
-import os
-from flask import Flask, send_from_directory
+from flask import Flask
 
 # Initializing flask app
 app = Flask(__name__)

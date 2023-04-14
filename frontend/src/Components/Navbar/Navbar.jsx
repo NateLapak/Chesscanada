@@ -1,4 +1,4 @@
-import {Box, Flex, HStack, IconButton, Menu, useDisclosure, Stack} from '@chakra-ui/react';
+import {Box, Flex, HStack, IconButton, Menu, useDisclosure, Stack, Link } from '@chakra-ui/react';
 
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -16,7 +16,10 @@ const Navbar = () => {
             <IconButton size={'md'} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen}/>
                 <HStack spacing={8} alignItems={'center'} color="white">
                     <Box size={[20, 40, 60, 80]}>
-                        Chesscanada
+
+                        <Link href="/">
+                            Chesscanada
+                        </Link>
                     </Box>
                 </HStack>
                 
@@ -24,11 +27,15 @@ const Navbar = () => {
                     <Menu>
                         <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }} color="white">
                             <Box size={[20, 40, 60, 80]}>
-                                Register
+                                <Link href="/register">
+                                    Register
+                                </Link>
                             </Box>
 
                             <Box size={[20, 40, 60, 80]}>
-                                Login
+                                <Link href="/login">
+                                    Login
+                                </Link>
                             </Box>
                         </HStack>
                     </Menu>
