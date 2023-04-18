@@ -1,9 +1,9 @@
-import Registerpage from "../Components/Register/Registerpage"
+import RegisterOne from "../Components/Register/RegisterOne"
 
 const Register = () => {
     return (
         <div>
-            <Registerpage />
+            <RegisterOne />
         </div>
     )
 }

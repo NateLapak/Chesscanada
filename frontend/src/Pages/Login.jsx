@@ -1,4 +1,4 @@
-import Loginpage from "../Components/Login/Loginpage"
+import LoginOne from "../Components/Login/LoginOne"
 import {useState, useEffect} from "react"
 
 
@@ -26,7 +26,7 @@ const Login = () => {
     return (
         <div>
             <p>{data.message}</p>
-            <Loginpage />
+            <LoginOne />
         </div>
     )
 }
