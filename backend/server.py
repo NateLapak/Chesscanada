@@ -1,8 +1,24 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+# Configure SQL alchemy database for Flask
+db = SQLAlchemy()
 
 # Initializing flask app
 app = Flask(__name__)
-  
+
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///chesscanada.sqlite3"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+db.init_app(app)
+
+# Create the users database model
+class users(db.Model):
+   id = db.Column("id", db.Integer, primary_key=True)
+   username = db.Column(db.String, unique=True, nullable=False)
+   email = db.Column(db.String)
+   password = db.Column(db.String)
+
+
 # Route to go to the play page
 @app.route('/play')
 def play():
