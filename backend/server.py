@@ -24,13 +24,13 @@ class users(db.Model):
 def play():
   return "play page"
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
    return {
       "message": "Hello world!"
    }
 
-@app.route("/register")
+@app.route("/register", methods=["POST"])
 def register():
    return "Register"
 

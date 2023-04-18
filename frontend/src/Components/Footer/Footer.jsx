@@ -9,7 +9,7 @@ const Footer = () => {
                 <Stack align={'flex-start center'}>
                 </Stack>
                 <Stack align={'flex-start center'}>
-                    <Link href="https://github.com/NateLapak/MaCS-Hackathon">Github</Link>
+                    <Link href="https://github.com/NateLapak/Chesscanada">Github</Link>
                 </Stack>
                 <Stack align={'flex-start'}>
                     <Link href="https://www.macewan.ca/home/">Linkedin</Link>

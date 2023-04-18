@@ -1,4 +1,4 @@
-const Playpage = () => {
+const PlayOne = () => {
     return (
         <div>
             <h2>Queue to play a game</h2>
@@ -6,4 +6,4 @@ const Playpage = () => {
     )
 }
 
-export default Playpage
+export default PlayOne
