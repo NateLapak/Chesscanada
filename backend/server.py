@@ -18,6 +18,11 @@ class users(db.Model):
    email = db.Column(db.String)
    password = db.Column(db.String)
 
+   def __init__(self, username, email, password):
+      self.username = username
+      self.email = email
+      self.password = password
+
 
 # Route to go to the play page
 @app.route('/play')
@@ -33,6 +38,10 @@ def login():
 @app.route("/register", methods=["POST"])
 def register():
    return "Register"
+
+@app.route("/puzzles")
+def puzzles():
+   return "Puzzles"
 
 # Running app
 if __name__ == '__main__':
