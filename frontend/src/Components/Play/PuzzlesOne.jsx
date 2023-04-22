@@ -1,15 +1,27 @@
-const PuzzleOne = () => {
+import ChessBoard from "../Chess/Chessboard/Chessboard"
+import {Box, Container, Center, Text} from "@chakra-ui/react"
 
-    const puzzles_api_endpoint = "https://lichess.org/api/puzzle/daily"
+const PuzzleOne = ({daily}) => {
 
-    // Fetches the puzzles from the lichess api
-    const fetch_puzzles = () => {
-        return null
-    }
+    const dailyData = daily
 
     return (
         <div>
-            <h2>Puzzles from Lichess API</h2>
+
+            <Center>
+                <h2>Puzzle from Lichess API</h2>
+            </Center>
+
+            <Box my={[20, 35, 40, 50]}> 
+
+
+                <Text align="center" fontSize="4xl">Daily Puzzle</Text>
+
+                <Container>
+                    <ChessBoard />
+                </Container>
+
+            </Box>
         </div>
     )
 }
