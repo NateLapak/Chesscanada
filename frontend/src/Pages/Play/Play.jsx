@@ -1,4 +1,4 @@
-import Playone from "../../Components/Play/PlayOne"
+import Playone from "../../Components/Play/Variations/PlayOne"
 
 const Play = () => {
     return (
