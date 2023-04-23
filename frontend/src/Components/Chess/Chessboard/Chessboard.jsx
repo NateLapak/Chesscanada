@@ -1,65 +1,62 @@
 import {Chessboard} from "react-chessboard"
-import { useState, useEffect } from "react"
+import { useState} from "react"
 import { Chess } from 'chess.js'
 
 const ChessBoard = () => {
-    const chess = new Chess()
-    const [game, setGame] = useState(chess)
+    const [game, setGame] = useState( new Chess())
 
-    useEffect(()=>{
-        setGame(new Chess())
-      }, [])
-
-    // Function that ensures the game does not entirely break
-    const safeGameMutate = (modify) => {
-        setGame((g) => {
-            const update = {...g};
-            modify(update)
-            return update;
-        })
+    const makeAMove = (move) => {
+        const gameCopy = new Chess();
+        gameCopy.loadPgn(game.pgn());
+        gameCopy.move(move)
+        setGame(gameCopy);
     }
+    
 
     // Makes ther other player make a random move
     const makeRandomMove = () => {
         const possibleMoves = game.moves()
 
         // Exits the game if a player get's checkmated or ends in a draw
-        if (game.game_over() || game.in_draw() || possibleMoves.length === 0) {
+        if (game.isGameOver()) {
             return;
         }
 
         // Randomly assigns a index indicating the position on the chess board
         const randomIndex = Math.floor(Math.random() * possibleMoves.length);
-        safeGameMutate((game) => {
-            game.move(possibleMoves[randomIndex]);
-        })
+        const gameCopy = new Chess();
+        gameCopy.loadPgn(game.pgn())
 
+        // if (game.history().length !== 0 && game ) {
+        //     gameCopy.move(possibleMoves[randomIndex])
+        //     setGame(gameCopy)
+        // }
+        
     }
+    
 
     // Function that changes and moves the chess pieces
     const onDrop = (sourceSquare, targetSquare) => {
 
-        
-        const gameCopy = {...game} 
-        console.log(game)
-        console.log(gameCopy)
 
-        const move = gameCopy.move({
+        const move = makeAMove({
             from: sourceSquare,
             to: targetSquare,
             promotion: "q" // Promotes pawn to queen automatically
-        })
-        setGame(gameCopy)
+        });
 
         // Makes illegal moves non-playable
         if (move === null) return false;
-
+        
+        window.setTimeout(makeRandomMove, 500);
         return true;
     }
+
 
     return (
         <div>            
             <Chessboard 
+                areArrowsAllowed
                 id="StyledBoard" 
                 customDarkSquareStyle={{backgroundColor: "#779952"}} 
                 customLightSquareStyle={{backgroundColor: "#edeed1"}}
