@@ -3,7 +3,7 @@ import { useState} from "react"
 import { Chess } from 'chess.js'
 
 const ChessBoard = () => {
-    const [game, setGame] = useState( new Chess())
+    const [game, setGame] = useState(new Chess())
 
     const makeAMove = (move) => {
         const gameCopy = new Chess();
@@ -23,7 +23,7 @@ const ChessBoard = () => {
         }
 
         // Randomly assigns a index indicating the position on the chess board
-        const randomIndex = Math.floor(Math.random() * possibleMoves.length);
+        // const randomIndex = Math.floor(Math.random() * possibleMoves.length);
         const gameCopy = new Chess();
         gameCopy.loadPgn(game.pgn())
 
@@ -37,8 +37,6 @@ const ChessBoard = () => {
 
     // Function that changes and moves the chess pieces
     const onDrop = (sourceSquare, targetSquare) => {
-
-
         const move = makeAMove({
             from: sourceSquare,
             to: targetSquare,
@@ -56,12 +54,11 @@ const ChessBoard = () => {
     return (
         <div>            
             <Chessboard 
-                areArrowsAllowed
-                id="StyledBoard" 
-                customDarkSquareStyle={{backgroundColor: "#779952"}} 
-                customLightSquareStyle={{backgroundColor: "#edeed1"}}
-                position={game.fen()}
-                onPieceDrop = {onDrop}
+            dropOffBoardAction="trash"
+            customDarkSquareStyle={{backgroundColor: "#779952"}} 
+            customLightSquareStyle={{backgroundColor: "#edeed1"}}
+            position={game.fen()} 
+            onPieceDrop = {onDrop}
             />
         </div>
     )

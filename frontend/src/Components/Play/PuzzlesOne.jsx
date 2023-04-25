@@ -3,7 +3,6 @@ import {Box, Container, Center, Text} from "@chakra-ui/react"
 
 const PuzzleOne = ({daily}) => {
     
-
     return (
         <div>
             

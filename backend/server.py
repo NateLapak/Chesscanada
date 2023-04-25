@@ -29,19 +29,33 @@ class users(db.Model):
 def play():
   return "play page"
 
+# Standard game of chess page
+@app.route("play/standard")
+def standard_game():
+   return "Play standard game of chess"
+
+@app.route("play/blindfold")
+def blindfold_game():
+   return "Play blindfolded chess game"
+
+# Login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
    return {
       "message": "Hello world!"
    }
 
+# Register page
 @app.route("/register", methods=["POST"])
 def register():
    return "Register"
 
+# Puzzles page
 @app.route("/puzzles")
 def puzzles():
    return "Puzzles"
+
+
 
 # Running app
 if __name__ == '__main__':
