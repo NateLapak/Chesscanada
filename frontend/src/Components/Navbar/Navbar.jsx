@@ -26,25 +26,25 @@ const Navbar = () => {
                 <Flex alignItems={'center'}>
                     <Menu>
                         <HStack as={'nav'} px={5} spacing={9} display={{ base: 'none', md: 'flex' }} color="white">
-                            <Box size={[20, 40, 60, 80]}>
+                            <Box size={[20, 40, 60, 80]} _hover={{textDecoration: 'none', bg: 'gray.600'}}>
                                 <Link href="/play" fontSize={[12, 14, 16, 18]}>
                                     Play
                                 </Link>
                             </Box>
 
-                            <Box size={[20, 40, 60, 80]} fontSize={[12, 14, 16, 18]}>
+                            <Box size={[20, 40, 60, 80]} fontSize={[12, 14, 16, 18]} _hover={{textDecoration: 'none', bg: 'gray.600'}}>
                                 <Link href="/puzzles">
                                     Puzzles
                                 </Link>
                             </Box>
 
-                            <Box size={[20, 40, 60, 80]}>
-                                <Link href="/register" fontSize={[12, 14, 16, 18]}>
+                            <Box size={[20, 40, 60, 80]} fontSize={[12, 14, 16, 18]} _hover={{textDecoration: 'none', bg: 'gray.600'}}>
+                                <Link href="/register">
                                     Register
                                 </Link>
                             </Box>
 
-                            <Box size={[20, 40, 60, 80]} fontSize={[12, 14, 16, 18]}>
+                            <Box size={[20, 40, 60, 80]} fontSize={[12, 14, 16, 18]} _hover={{textDecoration: 'none', bg: 'gray.600'}}>
                                 <Link href="/login">
                                     Login
                                 </Link>
@@ -58,7 +58,31 @@ const Navbar = () => {
             {isOpen ? (
                 <Box pb={4} display={{ md: 'none' }}>
                     <Stack as={'nav'} spacing={4}>
-                            Login
+                        <Box size={[20, 40, 60, 80]}  _hover={{textDecoration: 'none', bg: 'gray.600'}}>
+                            <Link href="/play" fontSize={[18, 20, 22, 24]} color="white">
+                                Play
+                            </Link>
+                        </Box>
+
+                        <Box size={[20, 40, 60, 80]} fontSize={[18, 20, 22, 24]} _hover={{textDecoration: 'none', bg: 'gray.600'}} color="white">
+                            <Link href="/puzzles">
+                                    Puzzles
+                            </Link>
+                        </Box>
+
+                        <Box size={[20, 40, 60, 80]} fontSize={[18, 20, 22, 24]} _hover={{textDecoration: 'none', bg: 'gray.600'}} color="white">
+                            <Link href="/register">
+                                Register
+                            </Link>
+                        </Box>
+
+                        <Box size={[20, 40, 60, 80]} fontSize={[18, 20, 22, 24]} _hover={{textDecoration: 'none', bg: 'gray.600'}} color="white">
+                            <Link href="/login">
+                                Login
+                            </Link>
+                        </Box>
+                        
+
                     </Stack>
                 </Box>
             ) : null}

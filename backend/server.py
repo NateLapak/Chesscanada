@@ -30,11 +30,11 @@ def play():
   return "play page"
 
 # Standard game of chess page
-@app.route("play/standard")
+@app.route("/play/standard")
 def standard_game():
    return "Play standard game of chess"
 
-@app.route("play/blindfold")
+@app.route("/play/blindfold")
 def blindfold_game():
    return "Play blindfolded chess game"
 

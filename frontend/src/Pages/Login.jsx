@@ -25,7 +25,6 @@ const Login = () => {
     
     return (
         <div>
-            <p>{data.message}</p>
             <LoginOne />
         </div>
     )
