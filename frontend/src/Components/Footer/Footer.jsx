@@ -9,10 +9,10 @@ const Footer = () => {
                 <Stack align={'flex-start center'}>
                 </Stack>
                 <Stack align={'flex-start center'}>
-                    <Link href="https://github.com/NateLapak/Chesscanada">Github</Link>
+                    <Link href="https://github.com/NateLapak/Chesscanada">Github Repository</Link>
                 </Stack>
                 <Stack align={'flex-start'}>
-                    <Link href="https://www.macewan.ca/home/">Linkedin</Link>
+                    <Link href="https://lichess.org/api">LichessAPI</Link>
                 </Stack>
                 
 
@@ -34,7 +34,7 @@ const Footer = () => {
                     }}>
             </Flex>
             <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-                © Created by Nathan Lapak
+                © 2023 Chesscanada.ca
             </Text>
         </Box>
     </Box>

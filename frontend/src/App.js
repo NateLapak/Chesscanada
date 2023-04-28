@@ -7,9 +7,8 @@ import Standard from './Components/Play/Variations/Standard';
 import Blindfold from './Components/Play/Variations/Blindfold';
 
 import Navbar from './Components/Navbar/Navbar';
-import Footer from "./Components/Footer/Footer";
-
 import {Route, Routes} from "react-router-dom"
+import Footer from './Components/Footer/Footer';
 
 function App() {
 
@@ -26,8 +25,8 @@ function App() {
         <Route path="/play/standard" element={<Standard />} />
         <Route path="/play/blindfold" element={<Blindfold />} />
       </Routes>
-      <Footer />
 
+      <Footer />
     </div>
   );
 }

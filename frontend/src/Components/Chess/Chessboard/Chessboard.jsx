@@ -37,15 +37,20 @@ const ChessBoard = () => {
 
     // Function that changes and moves the chess pieces
     const onDrop = (sourceSquare, targetSquare) => {
-        const move = makeAMove({
-            from: sourceSquare,
-            to: targetSquare,
-            promotion: "q" // Promotes pawn to queen automatically
-        });
-
-        // Makes illegal moves non-playable
-        if (move === null) return false;
+        let move = {}
         
+        try {
+            move = makeAMove({
+                from: sourceSquare,
+                to: targetSquare,
+                promotion: "q" // Promotes pawn to queen automatically
+            });
+        }
+
+        catch {
+            return null;
+        }
+
         window.setTimeout(makeRandomMove, 500);
         return true;
     }
