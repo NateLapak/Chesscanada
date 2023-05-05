@@ -15,4 +15,5 @@ Back-end: Flask
   <br/>
 Databse: Flask sql alchemy
   <br/>
+Will be deployed and hosted on Netfily, domain name registered on Google Domains. 
 </p>
