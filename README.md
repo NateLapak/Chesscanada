@@ -5,7 +5,7 @@
 <h2> Motivation </h2>
 <p> I wanted to create my first full-stack website and i've always wanted to try and create a chess website. I needed more experience and backend knowledge before I could tackle this project, but now I believe I have the skillset and previous web development experience to develop a project this big.</p>
 
-<h2> Technologies used </h2>
+<h2> Technologies </h2>
 <p> 
 Front-end: React and ChakraUI.
   <br/>
