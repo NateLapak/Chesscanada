@@ -6,21 +6,6 @@ import {Link as RouteLink} from "react-router-dom"
 
 const RegisterOne = () => {
 
-    const register_user = async () => {
-        const res = await fetch("", {
-            method: "POST",
-            body: JSON.stringfy({
-                username: "",
-                email: "",
-                password: "",
-            }),
-
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-    }
-
     // React hook to keep state of whether password field is shown or hidden
     const [showPassword, setShowPassword] = useState(false);
 

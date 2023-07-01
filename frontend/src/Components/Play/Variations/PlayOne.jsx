@@ -1,7 +1,5 @@
 import Blindfold from "./Blindfold"
 import Standard from "./Standard"
-import ChessBoard from "../../Chess/Chessboard/Chessboard"
-
 import { Button, Box, Center, Text } from "@chakra-ui/react"
 
 const PlayOne = () => {

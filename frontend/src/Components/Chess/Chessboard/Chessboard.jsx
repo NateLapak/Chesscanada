@@ -15,7 +15,7 @@ const ChessBoard = () => {
 
     // Makes ther other player make a random move
     const makeRandomMove = () => {
-        const possibleMoves = game.moves()
+        // const possibleMoves = game.moves()
 
         // Exits the game if a player get's checkmated or ends in a draw
         if (game.isGameOver()) {

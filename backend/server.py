@@ -41,9 +41,7 @@ def blindfold_game():
 # Login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
-   return {
-      "message": "Hello world!"
-   }
+   return "Login"
 
 # Register page
 @app.route("/register", methods=["POST"])
